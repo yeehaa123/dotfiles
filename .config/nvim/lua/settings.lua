@@ -62,7 +62,7 @@ vim.o.backupdir = HOME .. '/.vim/tmp/backup//' -- backups
 vim.o.directory = '/.vim/tmp/swap//'   -- swap files
 
 -- colors
-vim.opt.background = "dark"
+vim.o.background = 'dark'
 
 -- indent guides
 vim.g["indent_guides_enable_on_vim_startup"] = 1
@@ -73,13 +73,3 @@ vim.cmd [[
   filetype indent on
   syntax enable
 ]]
-
-local M = {}
-
-M.after = function()
-  vim.cmd [[
-    colorscheme minimalist
-  ]]
-end
-
-return M
