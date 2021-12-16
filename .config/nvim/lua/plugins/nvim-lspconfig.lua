@@ -38,6 +38,13 @@ M.after = function()
 
 	for _, lsp in ipairs(servers) do
 		nvim_lsp[lsp].setup({
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+				},
+			},
 			on_attach = on_attach,
 			capabilities = capabilities,
 			flags = {
