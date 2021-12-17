@@ -7,6 +7,7 @@ M.after = function()
 		sources = {
 			require("null-ls").builtins.formatting.stylua,
 			require("null-ls").builtins.formatting.prettier,
+			require("null-ls").builtins.formatting.terraform_fmt,
 			require("null-ls").builtins.completion.spell,
 		},
 		on_attach = function(client)
